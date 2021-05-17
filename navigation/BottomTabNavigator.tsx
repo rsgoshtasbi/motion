@@ -7,6 +7,7 @@ import { Ionicons } from "@expo/vector-icons";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
+import { Dimensions } from "react-native";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
@@ -37,6 +38,13 @@ export default function BottomTabNavigator() {
         },
         labelStyle: {
           color: "white",
+        },
+        activeBackgroundColor: "rgba(255, 255, 255, 0.25)",
+        tabStyle: {
+          borderRadius: 500,
+          width: Dimensions.get("window").width * 0.3,
+          marginLeft: 30,
+          marginRight: 30,
         },
       }}
     >

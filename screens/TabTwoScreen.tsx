@@ -121,12 +121,12 @@ export default function TabTwoScreen() {
           containerStyle={{ marginBottom: 50 }}
         >
           <SpeedDial.Action
-            icon={{ name: "home", color: "#fff" }}
+            icon={{ name: "location-city", color: "#fff" }}
             title="Motion Irvine"
             onPress={() => console.log("Motion Irvine")}
           />
           <SpeedDial.Action
-            icon={{ name: "home", color: "#fff" }}
+            icon={{ name: "beach-access", color: "#fff" }}
             title="Motion San Diego"
             onPress={() => console.log("Motion San Diego")}
           />
