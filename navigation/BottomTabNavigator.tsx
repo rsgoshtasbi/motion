@@ -8,6 +8,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { createStackNavigator } from "@react-navigation/stack";
 import * as React from "react";
 import { Dimensions } from "react-native";
+import ClassDetailPage from "../components/TabOne/ClassDetailPage";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
@@ -100,6 +101,15 @@ function TabOneNavigator() {
         component={TabOneScreen}
         options={{ headerTitle: "Schedule", headerTransparent: true }}
       />
+      <TabOneStack.Screen
+        name="ClassDetailPage"
+        component={ClassDetailPage}
+        options={{
+          headerTitle: "Class Info",
+          headerTransparent: true,
+          headerTintColor: "white",
+        }}
+      />
     </TabOneStack.Navigator>
   );
 }
@@ -113,6 +123,15 @@ function TabTwoNavigator() {
         name="TabTwoScreen"
         component={TabTwoScreen}
         options={{ headerTitle: "Home", headerTransparent: true }}
+      />
+      <TabTwoStack.Screen
+        name="ClassDetailPage"
+        component={ClassDetailPage}
+        options={{
+          headerTitle: "Class Info",
+          headerTransparent: true,
+          headerTintColor: "white",
+        }}
       />
     </TabTwoStack.Navigator>
   );

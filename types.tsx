@@ -16,10 +16,12 @@ export type BottomTabParamList = {
 
 export type TabOneParamList = {
   TabOneScreen: undefined;
+  ClassDetailPage: undefined;
 };
 
 export type TabTwoParamList = {
   TabTwoScreen: undefined;
+  ClassDetailPage: undefined;
 };
 
 export type TabThreeParamList = {

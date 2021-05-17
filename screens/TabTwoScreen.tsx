@@ -2,16 +2,18 @@ import * as React from "react";
 import {
   View,
   StyleSheet,
-  Image,
   ImageBackground,
   ScrollView,
   Text,
   Dimensions,
+  Alert,
 } from "react-native";
-import { ListItem, Avatar } from "react-native-elements";
+import { ListItem, Avatar, Button } from "react-native-elements";
 import { SpeedDial } from "react-native-elements";
+import { useNavigation } from "@react-navigation/native";
 
 export default function TabTwoScreen() {
+  const navigation = useNavigation();
   const [open, setOpen] = React.useState(false);
   const list = [
     {
@@ -91,6 +93,10 @@ export default function TabTwoScreen() {
                 bottomDivider
                 style={{ paddingBottom: 5 }}
                 containerStyle={{ borderRadius: 50 }}
+                onPress={() =>
+                  navigation.navigate("ClassDetailPage", { bookable: false })
+                }
+                underlayColor={"transparent"}
               >
                 <Avatar
                   source={require("../assets/images/profile_picture.png")}

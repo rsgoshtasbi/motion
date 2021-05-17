@@ -1,9 +1,13 @@
 import * as React from "react";
 import { View, StyleSheet, ImageBackground, Dimensions } from "react-native";
+import { Button } from "react-native-elements/dist/buttons/Button";
 import { SafeAreaView } from "react-native-safe-area-context";
 import AgendaScreen from "./AgendaScreen";
+import { useNavigation } from "@react-navigation/native";
 
 export default function TabOneScreen() {
+  const navigation = useNavigation();
+
   return (
     <ImageBackground
       source={require("../assets/images/background.png")}
@@ -18,7 +22,7 @@ export default function TabOneScreen() {
           marginTop: 5,
         }}
       >
-        <AgendaScreen />
+        <AgendaScreen navigation={navigation} />
       </View>
     </ImageBackground>
   );

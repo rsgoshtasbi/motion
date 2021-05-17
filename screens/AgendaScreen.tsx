@@ -65,7 +65,11 @@ export default class AgendaScreen extends Component {
       <TouchableOpacity
         testID={testIDs.agenda.ITEM}
         style={[styles.item, { height: item.height }]}
-        onPress={() => Alert.alert(item.name)}
+        onPress={() =>
+          this.props.navigation.navigate("ClassDetailPage", {
+            bookable: true,
+          })
+        }
       >
         <Text>{item.name}</Text>
       </TouchableOpacity>
